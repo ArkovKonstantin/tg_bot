@@ -16,6 +16,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     print(get_settings().nats_uri)
-    print(get_settings().TOKEN)
+    print("TOKEN", get_settings().TOKEN)
 
     main()

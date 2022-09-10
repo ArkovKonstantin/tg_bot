@@ -10,6 +10,7 @@ python-telegram-bot = "^20.0a4"
 pydantic = {extras = ["dotenv"], version = "^1.10.2"}
 nats-py = "^2.1.7"
 install = "^1.3.5"
+httpx = "^0.23.0"
 
 [tool.poetry.dev-dependencies]
 
