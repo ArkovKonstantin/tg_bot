@@ -7,3 +7,11 @@ format:  ##@Code Reformat code with isort and black
 run:  ##@Application Run application server
 	poetry run python3 -m $(APPLICATION_NAME)
 
+env:  ##@Environment Create .env file with variables
+	@$(eval SHELL:=/bin/bash)
+	@cp .env.sample .env
+	@echo "SECRET_KEY=$$(openssl rand -hex 32)" >> .env
+
+nats:  ##@Run Nats Server
+	docker-compose -f docker-compose.yml up -d --remove-orphans
+
